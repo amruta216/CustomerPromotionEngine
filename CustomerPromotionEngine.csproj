@@ -44,7 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassforAllTestData.cs" />
+    <Compile Include="CustomerCart.cs" />
+    <Compile Include="EngineToCalculateTotal.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="PromotionEngineComboOffer.cs" />
+    <Compile Include="PromotionEngineFixedPrice.cs" />
+    <Compile Include="Interfaces.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
