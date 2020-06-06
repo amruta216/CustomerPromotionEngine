@@ -9,11 +9,11 @@ namespace CustomerPromotionEngine
 
     interface IPromotionEngineFixedPrice
     {
-        double CalcPromotionEngineFixedPrice();
+        double CalcPromotionEngineFixedPrice(char CustomerItemID, int CustomerQty, double ActualPrice, string PromotionData, ref bool flgPromotionActivate);
     }
     interface IPromotionEngineComboOffer
-  {
-        double CalcPromotionEngineComboOffer();
+    {
+        double CalcPromotionEngineComboOffer(char CustomerItemID, int CustomerQty, double ActualPrice, string PromotionData, ref bool flgPromotionActivate, ref HashSet<char> hsComboSkuID);
     }
 
     // Similarly interface for %

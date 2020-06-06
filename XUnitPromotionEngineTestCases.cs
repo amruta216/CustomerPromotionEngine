@@ -3,27 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace CustomerPromotionEngine
 {
-    class Program
+    public class XUnitPromotionEngineTestCases
     {
-        static void Main(string[] args)
+        // Here we can give test data through [Theory], but due to time limit I have creates just simple test case
+        [Fact]
+        public void TestCalculateCustomerTotal()
         {
-            double CustomerTotal;
-
             // Create instance to take test data
             ClassforAllTestData objPromotionEngineTestDataClass = new ClassforAllTestData();
             List<CustomerCart> objCustomerCartList = objPromotionEngineTestDataClass.CustomerOrderData();
-
-            // Important method to calculate customer Total
             ICustomerTotal objCalculateTotalEngine = new EngineToCalculateTotal();
-
-            CustomerTotal = objCalculateTotalEngine.CalculateCustomerTotal(objCustomerCartList);
-
-            Console.WriteLine("CustomerTotal: " + CustomerTotal);
-
-            Console.ReadLine();
+            Assert.Equal(370, objCalculateTotalEngine.CalculateCustomerTotal(objCustomerCartList));
         }
     }
 }

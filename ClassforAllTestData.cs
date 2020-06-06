@@ -32,5 +32,16 @@ namespace CustomerPromotionEngine
             hsPromotionHashTable.Add('C', PromotionData);
         }
 
+        public List<CustomerCart> CustomerOrderData()
+        {
+            List<CustomerCart> MyCustomerCartList = new List<CustomerCart>();
+            MyCustomerCartList.Add(new CustomerCart('A', 5));
+            MyCustomerCartList.Add(new CustomerCart('B', 5));
+            MyCustomerCartList.Add(new CustomerCart('C', 1));
+            //MyCustomerCartList.Add(new CustomerCart('D', 1));
+
+            return MyCustomerCartList;
+        }
+
     }
 }
